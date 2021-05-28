@@ -1,0 +1,40 @@
+<div class="row no-gutters w-100">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <div class="brand-container vertical-filters-filters">
+            <span class="vertical-filters-filters">BRAND</span>
+
+            <ul class="brand-list">
+                <li>
+                    <mat-checkbox *ngFor="let a of data | unique : 'brand'" [(ngModel)]="a.isSelected" (change)="setSelectedData()" >
+                        <span style="font-weight: 400;">
+                            {{a.brand}}</span>
+                    </mat-checkbox>
+                </li>
+            </ul>
+        </div>
+        <div class="brand-container vertical-filters-filters">
+            <span class="vertical-filters-filters">COLOR</span>
+
+            <ul class="brand-list">
+                <li>
+                    <mat-checkbox *ngFor="let a of data | unique : 'primaryColour'" [(ngModel)]="a.isSelectedColor" (change)="setSelectedData()" >
+                        <span style="font-weight: 400;">
+                            {{a.primaryColour}}</span>
+                    </mat-checkbox>
+                </li>
+            </ul>
+        </div>
+        <div class="brand-container vertical-filters-filters">
+            <span class="vertical-filters-filters">PRICE</span>
+
+            <ul class="brand-list">
+                <li>
+                    <mat-checkbox *ngFor="let a of priceRangeList" [(ngModel)]="a.isSelectedPrice" (change)="setSelectedData()" >
+                        <span style="font-weight: 400;">
+                           Rs. {{a.min}} to Rs. {{a.max}}  </span>
+                    </mat-checkbox>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>

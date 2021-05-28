@@ -1,0 +1,77 @@
+<div fxLayout="row wrap" fxFlex="100%" fxLayoutAlign="start start" class="main" >
+
+    <div fxFlex="100%" fxLayoutAlign="start start">
+        <h2>My Shopping Bag ({{addToCartList.length}} items)</h2>
+    </div>
+
+    <div fxFlex="70%" fxLayoutAlign="start start" fxLayout="row wrap" >
+
+            <div fxLayout="row wrap" fxFlex="100%" fxLayoutAlign="start start" class="firstBlock" *ngFor="let a of addToCartList">
+                <div fxFlex="80%">
+                    <div class="produtPreview">
+                        <img src="{{a.searchImage}}" height="180px" width="180px">
+                    </div>
+                    <div class="heading">
+                        <h4 class="Title">Brand : <span style="font-weight: 200;">{{a.brand}}</span></h4>
+                        <p class="Title">Description <span style="font-weight: 200;">{{a.additionalInfo}}</span></p>
+                        <span>
+                            <mat-form-field class="w-100" appearance="fill">
+                                <mat-label>Quantity</mat-label>
+                                <mat-select [(ngModel)]="a.quantity" (ngModelChange)="selectedQuantity(a)">
+                                    <mat-option [value]="1">1</mat-option>
+                                    <mat-option [value]="2">2</mat-option>
+                                    <mat-option [value]="3">3</mat-option>
+                                    <mat-option [value]="4">4</mat-option>
+                                    <mat-option [value]="5">5</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </span>
+                    </div>
+                </div>
+                <div fxFlex="20%">
+                    <h5 class="Title">Total:₹ {{a.totalPrice}}</h5>
+                    <p class="discountDesc"><span class="strikethrough">₹.{{a.mrp}}</span> <span
+                            class="discount">({{a.discount}}% OFF)</span></p>
+                </div>
+                <div fxFlex="50%" fxLayoutAlign="start start">
+                    <button mat-raised-button color="white" class="btnRemove" (click)="removeFromBag(a)">REMOVE</button>
+                    <button mat-raised-button color="white" class="btnRemove">MOVE TO WHISHLIST</button>
+                </div>
+            </div>
+        
+    </div>
+    <div fxFlex="30%" fxLayout="row wrap" fxLayoutAlign="start start">
+        <div fxFlex="100%" fxLayout="row wrap">
+            <h2>PRICE DETAILS ({{addToCartList.length}} items) </h2>
+        </div>
+        <div fxFlex="100%" fxLayout="row wrap" class="firstBlock" >
+            <div fxFlex="50%">
+                <div class="leftSideTitle">
+                    Total MRP
+                </div>
+                <div class="secondBlock">
+                    Discount MRP
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <div class="subTitle">
+                    ₹ {{totalamount()}}
+                </div>
+                <div class="discountDesc">
+                    -₹ {{discountAmount}} (2% OFF)
+                </div>
+            </div>
+        </div>
+        <div fxFlex="100%" fxLayout="row wrap">
+            <div fxFlex="50%">
+                <h2 class="sectionTotal">Total Amount</h2>
+            </div>
+            <div fxFlex="50%" class="finalAmount">
+                <span>₹{{finalAmount}} </span>
+            </div>
+        </div>
+        <div fxFlex="100%" fxLayout="row wrap">
+            <button mat-raised-button color="accent">PLACE ORDER</button>
+        </div>
+    </div>
+</div>

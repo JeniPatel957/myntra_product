@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="overflow: hidden;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../../assets/images/download.jpg" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="home" aria-current="page" href="#">MEN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">WOMEN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">KIDS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BEAUTY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME & LINING</a>
+                </li>
+            </ul>
+            <div class="query">
+                <input type="search" [(ngModel)]="searchData" (ngModelChange)="setSearchData()" class="searchBar" placeholder="Search for products, brands and more"
+                    aria-label="Search">
+                <span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="793"></span>
+            </div>
+            <div class="actions">
+                <div class="users">
+                    <div class="userIcon">
+                        <span class="sprite iconUser headerUserIcon"></span>
+                        <span class="userTitle">Profile</span>
+                    </div>
+                </div>
+                <a class="cart">
+                    <span class="sprite iconBag headerBag"></span>
+                    <span class="badges badges-notify">0</span>
+                    <span class="userTitle">Bag</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</nav>

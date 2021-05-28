@@ -1,0 +1,202 @@
+
+.logo{
+    height: 60px;
+    width: 100px;
+    vertical-align: middle;
+}
+.query{
+    float: right;
+    line-height: 0;
+    margin: 20px 100px 20px 100px;
+    position: relative;
+}
+.searchBar{
+    width: 420px;
+    color: #696e79;
+    box-sizing: content-box;
+    padding: 8px 10px 10px;
+    margin: 0;
+    outline: 0;
+    border: 1px solid #ffffff;
+    background: #f5f5f6;
+}
+a.search{
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    display: inline-block;
+    height: 28px;
+    width: 40px;
+    text-align: center;
+    padding: 8px 0 2px;
+    background: #f5f5f6;
+    border: 1px solid #f5f5f6;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    position: absolute;
+    left: -41px;
+}
+.navbar{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.actions {
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 0;
+    height: 40px;
+    margin: -6px 0px 0px 0px;
+}
+.actions .user{
+    position: relative;
+    height: 60px;
+    margin: 0 20px 0 35px;
+}
+.sprite{
+    background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    background-size: 1404px 105px;
+}
+.userIcon{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    padding: 0 12px 0 17px;
+    position: relative;
+    display: flex;
+    height: 40px;
+}
+.iconUser{
+    margin: 10px 0 0;
+    position: absolute;
+    bottom: 13px;
+    left: 5px;
+    display: block
+}
+.headerUserIcon{
+    width: 24px;
+    height: 24px;
+    background-position: -298px -56px;
+}
+.userTitle{
+    color: #000;
+    position: absolute;
+    bottom: 4px;
+    left: 1px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    padding-top: 10px;
+    line-height: 6px;
+}
+.cart{
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    margin: 0 0 0 55px;
+}
+.iconBag{
+    margin: 8px 0 0;
+    position: absolute;
+    bottom: 14px;
+}
+.headerBag{
+    width: 22px;
+    height: 22px;
+    background-position: -341px -56px;
+}
+.badges{
+    white-space: nowrap;
+    text-align: center;
+    line-height: 18px;
+    padding: 0 6px;
+    height: 18px;
+    background: #ff3f6c;
+    position: absolute;
+    border-radius: 50%;
+    color: #fff;
+    left: 15px;
+    top: -4px;
+    font-weight: 600;
+}
+.badges-notify{
+    background-color: #f11ab1; 
+}
+.filterTitle{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 5%;
+}
+.horizontal-filters-sortContainer {
+    /* display: inline-block; */
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 0;
+    position: relative;
+    top: 5px;
+}
+.sortBy{
+    padding: 9px 14px;
+    font-size: 14px;
+    color: #282c3f;
+    cursor: pointer;
+    position: relative;
+    width: 255px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #d4d5d9;
+}
+.horizontal-filters-base {
+    width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    border-bottom: 1px solid #eaeaec;
+    padding-bottom: 15px;
+}
+.sort-downArrow {
+    margin-left: 5px;
+    margin-top: 5px;
+    float: right;
+}
+.sort-sortBy span {
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #282c3f;
+}
+.sort-downArrow {
+    margin-left: 5px;
+    margin-top: 5px;
+    float: right;
+}
+.sprites-downArrow {
+    background-position: -367px -1px;
+    width: 15px;
+    height: 10px;
+}
+.myntraweb-sprite {
+    background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    background-size: 1404px 105px;
+    display: inline-block;
+}
+.sort-list{
+    width: 255px;
+    background-color: #fff;
+    position: absolute;
+    top: 33px;
+    left: -1px;
+    margin: 0;
+    padding: 16px 0;
+    z-index: 2;
+    display: none;
+    border: 1px solid #d4d5d9;
+    border-top: none;
+    -webkit-box-shadow: 0 8px 10px 0 rgb(0 0 0 / 8%);
+    box-shadow: 0 8px 10px 0 rgb(0 0 0 / 8%);
+}

@@ -1,0 +1,36 @@
+<div fxLayout="row wrap" fxFlex="100%" fxLayoutAlign="start start" >
+  <div fxFlex="20%">
+    <app-left-sidebar></app-left-sidebar>
+  </div>
+  <div fxLayout="row wrap" fxFlex="80%">
+    <div fxLayout="row wrap" fxFlex="25%" *ngFor="let a of data">
+      <img src="{{a.searchImage}}" class="preview">
+      <ng-container *ngIf="a.rating">
+        {{returnRate(a)}} <span> | {{a.ratingCount}}</span>
+        <h2 class="breandTitle">{{a.brand}}</h2>
+      </ng-container>
+      <ng-container *ngIf="!a.rating">
+        <p style="width: 100%;"></p>
+      </ng-container>
+      <div class="text">
+        <h5>{{a.additionalInfo}}</h5>
+      </div>
+      <div style="display: inherit;
+    width: 100%;">
+        <ng-container *ngIf="a.discount">
+          <h3 class="salePrice">Rs.{{a.salePrice}}</h3>
+          <span class="strikethrough"> Rs.{{a.mrp}} </span>
+          <span class="discount">({{a.discount}}% OFF)</span>
+        </ng-container>
+        <ng-container *ngIf="!a.discount">
+          <h3 class="salePrice">Rs.{{a.mrp}}</h3>
+        </ng-container>
+      </div>
+      <br>
+      <div>
+        <button mat-raised-button color="accent" *ngIf="!checkItemIncart(a)" (click)="addToBag(a)">Add To Bag</button>
+        <button mat-raised-button class="btnRemoveCart" *ngIf="checkItemIncart(a)" (click)="removeFromBag(a)">Remove from Bag</button>
+      </div>
+    </div>
+  </div>
+</div>

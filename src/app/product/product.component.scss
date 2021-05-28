@@ -1,0 +1,150 @@
+.search-searchProductsContainer {
+    padding-top: 24px;
+    padding-left: 15px;
+    padding-right: 20px;
+}
+.product{
+    width: 210px;
+    text-align: left;
+    position: relative;
+    vertical-align: top;
+    overflow: hidden;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 10px 30px;
+}
+ul{
+    list-style: none;
+}
+.results {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    margin: 0 -10px 0 3px;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.listItemPre{
+    position: relative;
+}
+.listItemPre .rating{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.preview{
+    padding: 9px 15px 15px 0px !important;
+    border-radius: 18px;
+    height: 300px;
+    width: 100%;
+}
+.strikethrough {
+    text-decoration: line-through;
+    color: #aaaaaa;
+    font-size: 12px;
+  }
+.product-thumbShim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101%;
+    height: 210px;
+    background-color: #282c3f;
+    -webkit-transition: visibility 0s,opacity .5s linear;
+    transition: visibility 0s,opacity .5s linear;
+    visibility: hidden;
+    opacity: 0;
+}
+.productInfo {
+    position: relative;
+    z-index: 3;
+    background: #fff;
+    padding: 0 10px;
+    height: 100%;
+    margin-top: 12px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.breandTitle{
+    width: 100%;
+    margin-bottom: 0px;
+}
+.salePrice{
+    font-weight: 600;
+    margin-right: 5px;
+    line-height: 20px;
+}
+.discount{
+    color: #ff905a;
+    margin-left: 5px;
+    font-size: 12px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+*[_ngcontent-orb-c108] {
+    margin: 0;
+    padding: 0;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+.text {
+    width: 100%;
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btnRemoveCart{
+    background-color: #404040;
+    color: #ffffff;
+}
