@@ -12,7 +12,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   productSearch = new Subject<any>();
-  
+  addToCartList = new Subject<any>();
   getdata() {
     return this.http.get("https://my-json-server.typicode.com/jemin136/jsonplaceholderdemo/products");
   }
@@ -25,4 +25,12 @@ export class ApiService {
     return this.productSearch.asObservable();
   }
 
+
+  setCardData(addToCartList : any){
+    this.addToCartList.next(addToCartList)
+  }
+  
+  getCardData() : Observable<any>{
+    return this.addToCartList.asObservable();
+  }
 }
