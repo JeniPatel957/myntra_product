@@ -39,8 +39,8 @@
                 </div>
                 <a class="cart">
                     <span class="sprite iconBag headerBag"></span>
-                    <span class="badges badges-notify">0</span>
-                    <span class="userTitle">Bag</span>
+                    <a class="badges badges-notify">{{addToCartList.length}}</a>
+                    <a class="userTitle" (click)="redirectToPage('cart')">Bag</a>
                 </a>
 
             </div>

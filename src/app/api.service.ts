@@ -12,7 +12,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   productSearch = new Subject<any>();
-
+  
   getdata() {
     return this.http.get("https://my-json-server.typicode.com/jemin136/jsonplaceholderdemo/products");
   }

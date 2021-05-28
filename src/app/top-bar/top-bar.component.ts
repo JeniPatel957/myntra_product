@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,8 +11,8 @@ export class TopBarComponent implements OnInit {
 
   data: any;
   searchData = "";
-
-  constructor(private api: ApiService) {
+  addToCartList: any = [];
+  constructor(private api: ApiService,private router : Router) {
   }
 
   ngOnInit(): void {
@@ -20,11 +21,15 @@ export class TopBarComponent implements OnInit {
     });
     console.log(this.data)
     this.data = this.data
+    let dataList: any = localStorage.getItem("addToCart");
+    this.addToCartList = dataList ? JSON.parse(dataList) : [];
   }
 
   setSearchData() {
     this.api.setSearchData(this.searchData);
-    
+  }
+  redirectToPage(page){
+    this.router.navigate([page]);
   }
 }
 
