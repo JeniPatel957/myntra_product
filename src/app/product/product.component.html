@@ -1,6 +1,6 @@
 <div fxLayout="row wrap" fxFlex="100%" fxLayoutAlign="start start" >
   <div fxFlex="20%">
-    <app-left-sidebar></app-left-sidebar>
+    <app-left-sidebar (selectPrice)="GetSelectedPrice($event)"></app-left-sidebar>
   </div>
   <div fxLayout="row wrap" fxFlex="80%">
     <div fxLayout="row wrap" fxFlex="25%" *ngFor="let a of data">

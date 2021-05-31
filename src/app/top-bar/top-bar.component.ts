@@ -1,3 +1,4 @@
+import { logging } from 'protractor';
 import { Router } from '@angular/router';
 import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
@@ -8,27 +9,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.scss']
 })
 export class TopBarComponent implements OnInit {
-
-  data: any;
+ 
   searchData = "";
   addToCartList: any = [];
-  constructor(private api: ApiService,private router : Router) {
+  tempList: any = [];
+  constructor(private api: ApiService, private router: Router) {
   }
 
   ngOnInit(): void {
-    this.api.getdata().subscribe(data => {
-      this.data = data;
-    });
-    console.log(this.data)
-    this.data = this.data
+    
     let dataList: any = localStorage.getItem("addToCart");
     this.addToCartList = dataList ? JSON.parse(dataList) : [];
+
+    this.api.getCardData().subscribe(res => {
+      this.addToCartList = res;
+    })
   }
 
   setSearchData() {
     this.api.setSearchData(this.searchData);
   }
-  redirectToPage(page){
+  
+  redirectToPage(page) {
     this.router.navigate([page]);
   }
 }
